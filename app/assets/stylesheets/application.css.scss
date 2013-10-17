@@ -1,0 +1,121 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the top of the
+ * compiled file, but it's generally better to create a new file per style scope.
+ *
+ *= require_self
+ *= require_tree .
+ */
+
+html {
+  height: 100%;
+}
+
+body {
+  background-color: #ff6;
+  padding: 0;
+  width: 920px;
+  height: 100%;
+  margin: 0 auto;
+}
+
+#columns {
+  background: #9a9a9b;
+  height: 100%;
+  margin-top: 82px;
+
+  #main {
+    margin-left: 252px;
+    padding: 5px 10px;
+    background-color: #9A9A9B;
+    //background-image: -webkit-linear-gradient(top, #2F2727, #1a82f7);
+    //background-image: -moz-linear-gradient(top, #2F2727, #1a82f7);
+    //background-image: -ms-linear-gradient(top, #2F2727, #1a82f7);
+
+    .list_line_even {
+      background: #ACCBE0;
+      color: #1B619B;
+    }
+
+    .list_line_odd {
+      background: #1B619B;
+      color: #ACCBE0;
+    }
+
+    table {
+      border-collapse: collapse;
+      padding: 5px;
+      vertical-align: top;
+      table-layout: fixed;
+      width: 100%;
+      text-align: center;
+      word-wrap: break-word;
+
+      a:link {
+        color: white;
+      }
+      a:visited {
+        color: white;
+      }
+      a:hover {
+        color: yellow;
+        background-color: black;
+      }
+      a:active {
+        color: black;
+      }
+
+      th {
+	background-color: #accbe0;
+	border-bottom: solid 2px white;
+	font-size: 1.1em;
+      }
+
+      .list_actions {
+        font-size: .7em;
+        text-align: right;
+        padding: 1em;
+	margin: auto;
+	width: 8%;
+      }
+    }
+  }
+
+  #side {
+    float: left;
+    padding-top: 5px;
+    width: 250px;
+    height: 100%;
+    background: black;
+    border-right: solid 2px #ff6;
+
+    img {
+      margin-left: auto;
+      margin-right: auto;
+      display: block;
+      border-radius: 12px;
+    }
+
+    ul {
+      padding: 1em 2em;
+      li {
+        list-style: none;
+        a {
+          color: #ff6;
+          font-size: small;
+	}
+
+	a:hover {
+	  color: black;
+	  background-color: #ff6;
+	  font-weight: bold;
+	}
+      }
+    }
+  }
+}

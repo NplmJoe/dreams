@@ -1,0 +1,19 @@
+<p>
+  <b>Name:</b>
+  <%= @app.name %>
+</p>
+
+<p>
+  <b>Dev lead:</b>
+  <%= @app.dev_lead %>
+</p>
+
+<p>
+  <b>Support lead:</b>
+  <%= @app.support_lead %>
+</p>
+
+
+<%= link_to 'Edit', edit_app_path(@app) %> |
+<%= link_to 'Back', apps_path %> |
+<%= link_to 'New', new_app_path %>

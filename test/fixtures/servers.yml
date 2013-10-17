@@ -1,0 +1,21 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  name: MyString
+  os: MyString
+  os_version: MyString
+  os_last_updated: 2013-02-06
+  app_version: MyString
+  app_last_updated: 2013-02-06
+  environment: two
+  app: two
+
+two:
+  name: MyString
+  os: MyString
+  os_version: MyString
+  os_last_updated: 2013-02-06
+  app_version: MyString
+  app_last_updated: 2013-02-06
+  environment: two
+  app: two

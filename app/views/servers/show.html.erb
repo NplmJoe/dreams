@@ -1,0 +1,45 @@
+<p>
+  <b>Name:</b>
+  <%= @server.name %>
+</p>
+
+<p>
+  <b>Os:</b>
+  <%= @server.os %>
+</p>
+
+<p>
+  <b>Os version:</b>
+  <%= @server.os_version %>
+</p>
+
+<p>
+  <b>Os last updated:</b>
+  <%= @server.os_last_updated %>
+</p>
+
+<p>
+  <b>App version:</b>
+  <%= @server.app_version %>
+</p>
+
+<p>
+  <b>App last updated:</b>
+  <%= @server.app_last_updated %>
+</p>
+
+<p>
+  <b>Environment:</b>
+  <%= @server.environment.name %>
+</p>
+
+<p>
+  <b>App:</b>
+  <%= @server.app.name %>
+</p>
+
+
+<%= link_to 'Edit', edit_server_path(@server) %> |
+<%= link_to 'Delete', @server, method: :delete, data: { confirm: 'Are you sure?' } %> |
+<%= link_to 'Back', :back %> |
+<%= link_to 'New', new_server_path %>

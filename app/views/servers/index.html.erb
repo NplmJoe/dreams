@@ -1,0 +1,25 @@
+<h1>Server Listing</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Environment</th>
+    <th>App</th>
+    <th>App last updated</th>
+    <th>Operating System(OS)</th>
+  </tr>
+
+<% @servers.each do |server| %>
+  <tr class="<%= cycle('list_line_odd', 'list_line_even') %>">
+    <td><%= link_to server.name, server %></td>
+    <td><%= server.environment.name %></td>
+    <td><%= server.app.name %></td>
+    <td><%= server.app_last_updated %></td>
+    <td><%= server.os + " " + server.os_version %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Server', new_server_path %>

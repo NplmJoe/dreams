@@ -1,0 +1,16 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  name: MyString
+  description: MyString
+  integrated: false
+
+two:
+  name: MyString
+  description: MyString
+  integrated: false
+
+dup:
+  name: Duplicate
+  description: MyString
+  integrated: false

@@ -1,0 +1,49 @@
+<%= form_for(@server) do |f| %>
+  <% if @server.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@server.errors.count, "error") %> prohibited this server from being saved:</h2>
+
+      <ul>
+      <% @server.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :name %><br />
+    <%= f.text_field :name %>
+  </div>
+  <div class="select">
+    <%= f.label :environment_id %><br />
+    <%= f.collection_select(:environment_id, Environment.all, :id, :name) %>
+  </div>
+  <div class="select">
+    <%= f.label :app_id %><br />
+    <%= f.collection_select(:app_id, App.all, :id, :name) %>
+  </div>
+  <div class="field">
+    <%= f.label :app_version %><br />
+    <%= f.text_field :app_version %>
+  </div>
+  <div class="field">
+    <%= f.label :app_last_updated %><br />
+    <%= f.date_select :app_last_updated %>
+  </div>
+  <div class="field">
+    <%= f.label :os %><br />
+    <%= f.text_field :os %>
+  </div>
+  <div class="field">
+    <%= f.label :os_version %><br />
+    <%= f.text_field :os_version %>
+  </div>
+  <div class="field">
+    <%= f.label :os_last_updated %><br />
+    <%= f.date_select :os_last_updated %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
